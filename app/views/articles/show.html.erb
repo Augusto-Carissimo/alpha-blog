@@ -2,3 +2,14 @@
 
 <p> Title: <%= @article.title %> <p/>
 <p> Description: <%= @article.description %> <p/>
+
+<table>
+  <tbody>
+    <tr>
+      <td> <%= button_to 'Edit', edit_article_path(@article), method: :get %> <td>
+      <td> <%= button_to 'Delete', article_path(@article), method: :delete, form: {
+        data: { turbo_confirm: 'Are you sure?' } } %> <td>
+      <td> <%= button_to 'Articles', articles_path, method: :get  %> </td>
+    </tr>
+  </tbody>
+</table>

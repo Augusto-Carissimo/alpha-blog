@@ -1,5 +1,7 @@
 <h1> Create new article </h1>
 
+<td> <%= link_to 'Articles', articles_path, method: :get  %> </td>
+
 <% if @article.errors.any? %>
   <h2> Errors occured</h2>
   <ul>
@@ -24,3 +26,4 @@
     <%= form.submit %>
   </p>
 <% end %>
+
